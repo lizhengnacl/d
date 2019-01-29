@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sequence Diagram</title>
+    <style>
+        #content {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #input {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        #output {
+            flex-grow: 3;
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+
+        #input textarea {
+            outline: none;
+            height: 100%;
+            width: 100%;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            resize: none;
+            color: #333;
+            line-height: 20px;
+
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <div id="input">
+        <textarea id="textarea"></textarea>
+    </div>
+    <div id="output"></div>
+</div>
+
+<script src="https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js"></script>
+<script src="https://cdn.bootcss.com/underscore.js/1.9.1/underscore-min.js"></script>
+<script src="https://cdn.bootcss.com/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+
+<script src="dist/index.js"></script>
+
+<script>
+</script>
+</body>
+</html>
