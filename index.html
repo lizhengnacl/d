@@ -33,6 +33,13 @@
             box-sizing: border-box;
             padding: 10px;
         }
+
+        a {
+            color: #3974cc;
+            text-decoration: none;
+
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -41,12 +48,16 @@
     <div id="input">
         <textarea id="textarea"></textarea>
     </div>
-    <div id="output"></div>
+    <div id="output">
+        <a href="https://mermaidjs.github.io/demos.html" target="_blank">Demo</a>
+        <pre class="mermaid"></pre>
+    </div>
 </div>
 
-<script src="https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js"></script>
-<script src="https://cdn.bootcss.com/underscore.js/1.9.1/underscore-min.js"></script>
-<script src="https://cdn.bootcss.com/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+<!--<script src="https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js"></script>-->
+<!--<script src="https://cdn.bootcss.com/underscore.js/1.9.1/underscore-min.js"></script>-->
+<!--<script src="https://cdn.bootcss.com/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>-->
+<script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
 
 <script src="dist/index.js"></script>
 

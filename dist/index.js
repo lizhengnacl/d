@@ -60,11 +60,17 @@ var store = new Store();
  * * Created by lee on 2019/1/29
  */
 
-var options = { theme: 'simple' };
-var defualt = `Alice->Bob: Hello Bob, how are you?
+var defualt = `
+sequenceDiagram
+Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 `;
+
+mermaid.initialize({
+    theme: 'forest', // dark default forest neutral
+    startOnLoad: false
+});
 
 var input = document.getElementById('textarea');
 input.addEventListener('keyup', onChange);
@@ -80,11 +86,11 @@ function onChange() {
 }
 
 function draw(v) {
-    try {
-        var diagram = Diagram.parse(v);
-        document.getElementById('output').innerHTML = '';
-        diagram.drawSVG('output', options);
-    } catch (e) {}
+    var pre = document.getElementsByClassName('mermaid')[0];
+    pre.innerHTML = v;
+    mermaid.render('svgid', v, function (svg) {
+        pre.innerHTML = svg;
+    });
 }
 
 })));
